@@ -1,0 +1,6 @@
+{
+  "name": "COLLEXA",
+  "description": "Interactive career roadmap platform, real-time AI mock-interview environment, personalized AI counseling workspace, and free industry-certificate directory.",
+  "requestFramePermissions": ["camera", "microphone"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

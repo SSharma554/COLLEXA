@@ -1,0 +1,90 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --font-serif: 'Playfair Display', Georgia, serif;
+    --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    --color-burgundy: #800020;
+    --color-cream: #F3E6D5;
+    --color-ivory: #FFF9F2;
+    --color-rose: #D45060;
+  }
+
+  body {
+    font-family: var(--font-sans);
+    background-color: #FFF9F2;
+    color: #5C3D46;
+  }
+
+  h1, h2, h3, h4, .font-serif-heading {
+    font-family: var(--font-serif);
+    color: #800020;
+  }
+}
+
+/* 10s slow hue-shift animated gradient loop for signature elements */
+@keyframes signature-sweep {
+  0% {
+    filter: hue-rotate(0deg);
+  }
+  50% {
+    filter: hue-rotate(25deg);
+  }
+  100% {
+    filter: hue-rotate(0deg);
+  }
+}
+
+.animate-signature-sweep {
+  animation: signature-sweep 10s ease-in-out infinite;
+}
+
+.signature-gradient-bg {
+  background: linear-gradient(135deg, #800020 0%, #D45060 55%, #F3E6D5 100%);
+}
+
+.signature-gradient-text {
+  background: linear-gradient(135deg, #800020 0%, #D45060 60%, #9B1B30 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.signature-gradient-border {
+  border-image: linear-gradient(135deg, #800020 0%, #D45060 55%, #F3E6D5 100%) 1;
+}
+
+/* 2D Flip Card utilities */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.transform-style-3d {
+  transform-style: preserve-3d;
+}
+
+.backface-hidden {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+.rotate-y-180 {
+  transform: rotateY(180deg);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF9F2;
+}
+::-webkit-scrollbar-thumb {
+  background: #F3E6D5;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #D45060;
+}
+
+
